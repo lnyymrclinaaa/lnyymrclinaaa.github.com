@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Data - Provinsi Gorontalo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .map-container {
+            width: 100%;
+            height: 1050px;
+            border: 2px solid #94a3b8;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            background: #f8fafc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .map-container img {
+            width: 100%;
+            height: calc(100% - 20px);
+            object-fit: cover;
+            display: block;
+        }
+        .map-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.85);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .glass-panel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.4s ease;
+            height: 200px; /* Tinggi tetap */
+        }
+        
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover !important;
+            background-position: center !important;
+            z-index: 1;
+        }
+        
+        .glass-panel::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(0,0,0,0.4) 0%, 
+                rgba(0,0,0,0.2) 50%, 
+                rgba(0,0,0,0.6) 100%);
+            z-index: 2;
+        }
+        
+        /* TEKS DI ATAS */
+        .glass-panel h4, .glass-panel p {
+            position: relative;
+            z-index: 3;
+            color: white !important;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        
+        .glass-panel:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .kota-gorontalo::before { background-image: url('kg.jpg'); }
+        .kab-gorontalo::before { background-image: url('kab.jpg'); }
+        .bone-bolango::before { background-image: url('b.jpg'); }
+        .boalemo::before { background-image: url('bb.jpg'); }
+        .pohuwato::before { background-image: url('p.jpg'); }
+        .gorontalo-utara::before { background-image: url('gu.jpg'); }
+    </style>
+</head>
+<body>
+
+    <div class="bg-fixed" style="background-image: url('gr.jpg');"></div>
+    <div class="overlay-dark"></div>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">GORONTALO<span>PROV</span></a>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="pemerintahan.html">Pemerintahan</a></li>
+                <li><a href="potensi.html">Potensi</a></li>
+                <li><a href="pariwisata.html">Pariwisata</a></li>
+                <li><a href="peta.html" class="active">Peta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container section-pad">
+        <h1 class="text-center">Geografis Wilayah Administratif</h1>
+        <p class="text-center mb-2 text-dim">Terletak di Semenanjung Utara Pulau Sulawesi. Koordinat 0° 19' – 1° 15' LU.</p>
+        
+        <div class="map-container">
+            <img src="map.jpeg" alt="Peta Administrasi Kota Gorontalo">
+        </div>
+
+        <div class="grid-3">
+            <div class="glass-panel kota-gorontalo">
+                <h4 class="text-gold">Kota Gorontalo</h4>
+                <p class="text-dim">Ibukota Provinsi. Pusat jasa, perdagangan, pendidikan, dan kawasan bersejarah.</p>
+            </div>
+            <div class="glass-panel kab-gorontalo">
+                <h4 class="text-gold">Kab. Gorontalo</h4>
+                <p class="text-dim">Ibukota Limboto. Lumbung pangan utama, Menara Keagungan, Bandara Djalaluddin.</p>
+            </div>
+            <div class="glass-panel bone-bolango">
+                <h4 class="text-gold">Kab. Bone Bolango</h4>
+                <p class="text-dim">Ibukota Suwawa. Taman Nasional Nani Wartabone, wisata Hiu Paus.</p>
+            </div>
+            <div class="glass-panel boalemo">
+                <h4 class="text-gold">Kab. Boalemo</h4>
+                <p class="text-dim">Ibukota Tilamuta. Pulo Cinta, industri pertanian jagung.</p>
+            </div>
+            <div class="glass-panel pohuwato">
+                <h4 class="text-gold">Kab. Pohuwato</h4>
+                <p class="text-dim">Ibukota Marisa. Pertambangan emas, perkebunan sawit, Cagar Alam Panua.</p>
+            </div>
+            <div class="glass-panel gorontalo-utara">
+                <h4 class="text-gold">Kab. Gorontalo Utara</h4>
+                <p class="text-dim">Ibukota Kwandang. Gerbang laut utara, perikanan tangkap, Pulau Saronde.</p>
+            </div>
+        </div>
+
+        <div class="glass-panel mt-2" style="background: linear-gradient(135deg, rgba(52,65,85,0.9), rgba(0,0,0,0.8));">
+            <h3 class="text-center text-gold mb-2">Aksesibilitas Transportasi</h3>
+            <div class="grid-2">
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <i class="fas fa-plane fa-3x text-gold"></i>
+                    <div><h4>Bandara Djalaluddin (GTO)</h4><p class="text-dim" style="color: #e2e8f0;">Jakarta CGK, Makassar UPG, Manado MDC.</p></div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <i class="fas fa-ship fa-3x text-gold"></i>
+                    <div><h4>Pelabuhan Gorontalo & Anggrek</h4><p class="text-dim" style="color: #e2e8f0;">PELNI Tilongkabila, Tol Laut peti kemas.</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <small>&copy; 2026 Pemerintah Provinsi Gorontalo.</small>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

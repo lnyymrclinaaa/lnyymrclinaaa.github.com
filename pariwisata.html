@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariwisata - The Hidden Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-fixed" style="background-image: url('pa.webp');"></div>
+    <div class="overlay-dark"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">GORONTALO<span>PROV</span></a>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="pemerintahan.html">Pemerintahan</a></li>
+                <li><a href="potensi.html">Potensi</a></li>
+                <li><a href="pariwisata.html" class="active">Pariwisata</a></li>
+                <li><a href="peta.html">Peta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container section-pad">
+        <div class="text-center mb-2">
+            <h1>Surga Tersembunyi</h1>
+            <p>Jelajahi keajaiban Teluk Tomini, Hiu Paus, dan Kuliner Pedas yang Menggugah Selera.</p>
+        </div>
+
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'destinasi')">Destinasi Populer</button>
+            <button class="tab-btn" onclick="openTab(event, 'kuliner')">Gastronomi</button>
+            <button class="tab-btn" onclick="openTab(event, 'event')">Kalender Event</button>
+        </div>
+
+        <div id="destinasi" class="tab-pane active">
+            <div class="grid-3">
+                <div class="glass-panel" style="padding: 0; overflow: hidden;">
+                    <img src="hp.jpg" style="width:100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Hiu Paus Botubarani</h3>
+                        <p class="text-dim">Interaksi langsung dengan raksasa laut yang jinak, hanya 20 menit dari pusat kota.</p>
+                        <span class="text-gold"><i class="fas fa-map-marker-alt"></i> Kab. Bone Bolango</span>
+                    </div>
+                </div>
+                <div class="glass-panel" style="padding: 0; overflow: hidden;">
+                    <img src="r.jpg" style="width:100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Pulo Cinta Eco Resort</h3>
+                        <p class="text-dim">"The Maldives of Indonesia". Resort berbentuk hati di tengah laut jernih.</p>
+                        <span class="text-gold"><i class="fas fa-map-marker-alt"></i> Kab. Boalemo</span>
+                    </div>
+                </div>
+                <div class="glass-panel" style="padding: 0; overflow: hidden;">
+                    <img src="tl.jpg" style="width:100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Taman Laut Olele</h3>
+                        <p class="text-dim">Surga macro photography. Rumah bagi koral endemik Salvador Dali Sponge.</p>
+                        <span class="text-gold"><i class="fas fa-map-marker-alt"></i> Kab. Bone Bolango</span>
+                    </div>
+                </div>
+                <div class="glass-panel" style="padding: 0; overflow: hidden;">
+                    <img src="bo.jpg" style="width:100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Benteng Otanaha</h3>
+                        <p class="text-dim">Benteng pertahanan abad 16 dengan pemandangan Danau Limboto yang epik.</p>
+                        <span class="text-gold"><i class="fas fa-map-marker-alt"></i> Kota Gorontalo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="kuliner" class="tab-pane">
+            <div class="grid-2">
+                <div class="glass-panel text-center">
+                    <i class="fas fa-utensils fa-3x text-gold mb-2"></i>
+                    <h3>Binte Biluhuta</h3>
+                    <p class="text-dim">Sup Jagung khas Gorontalo. Campuran jagung manis, parutan kelapa, udang/ikan, dan kemangi. Rasanya unik: Manis, Asin, Pedas, Segar.</p>
+                </div>
+                <div class="glass-panel text-center">
+                    <i class="fas fa-fire fa-3x text-gold mb-2"></i>
+                    <h3>Ilabulo</h3>
+                    <p class="text-dim">Sering disebut "Pepes Sagu". Terbuat dari sagu dan ati ampela ayam yang dibumbui rempah pedas, dibungkus daun pisang, lalu dibakar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="event" class="tab-pane">
+            <div class="glass-panel">
+                <h3 class="mb-2">Kalender Event Pariwisata 2026</h3>
+                <div style="display: flex; gap: 1rem; flex-direction: column;">
+                    <div style="display: flex; gap: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                        <div style="background: var(--primary-gold); color: #000; padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 80px;">
+                            <strong>MEI</strong><br>02
+                        </div>
+                        <div>
+                            <h4>Festival Tumbilotohe</h4>
+                            <p class="text-dim">Tradisi pasang lampu minyak 3 malam sebelum Lebaran. Seluruh kota akan bercahaya.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                        <div style="background: var(--primary-gold); color: #000; padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 80px;">
+                            <strong>SEP</strong><br>15
+                        </div>
+                        <div>
+                            <h4>Festival Danau Limboto</h4>
+                            <p class="text-dim">Pesta rakyat, lomba perahu tradisional, dan pameran kuliner di tepian danau.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="background: var(--primary-gold); color: #000; padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 80px;">
+                            <strong>OKT</strong><br>20
+                        </div>
+                        <div>
+                            <h4>Gorontalo Karnaval Karawo</h4>
+                            <p class="text-dim">Parade busana kolosal yang menampilkan keindahan sulaman tangan khas Gorontalo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center"><small>&copy; 2026 Pemerintah Provinsi Gorontalo.</small></div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabLinks;
+            tabContent = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+                tabContent[i].classList.remove("active");
+            }
+            tabLinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
