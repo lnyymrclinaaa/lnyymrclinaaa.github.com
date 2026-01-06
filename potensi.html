@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potensi & Investasi - Gorontalo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Perbaikan agar hover halus dan tidak kaku */
+        .potensi-card {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 380px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+
+        .potensi-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.95) 15%, rgba(2, 6, 23, 0.2));
+            z-index: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .potensi-card .card-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            transition: transform 0.5s ease;
+        }
+
+        .potensi-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        .potensi-card:hover .card-content {
+            transform: translateY(-5px);
+        }
+
+        .potensi-card:hover::before {
+            background: linear-gradient(to top, rgba(2, 6, 23, 1) 25%, rgba(2, 6, 23, 0.3));
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-fixed" style="background-image: url('back2.jpg');"></div>
+    <div class="overlay-dark"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">GORONTALO<span>PROV</span></a>
+            <div class="hamburger" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="pemerintahan.html">Pemerintahan</a></li>
+                <li><a href="potensi.html" class="active">Potensi</a></li>
+                <li><a href="pariwisata.html">Pariwisata</a></li>
+                <li><a href="peta.html">Peta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container section-pad">
+        <div class="text-center mb-2">
+            <h1 class="text-gold">Sektor Unggulan</h1>
+            <p>Pilar utama penggerak roda ekonomi Provinsi Gorontalo.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="potensi-card" style="background-image: url('pertanian.jpg');">
+                <div class="card-content">
+                    <i class="fas fa-seedling text-gold fa-2x mb-1"></i>
+                    <h3 class="text-gold">Pertanian & Perkebunan</h3>
+                    <p class="text-dim">Komoditas jagung sebagai unggulan nasional dengan lahan yang sangat luas.</p>
+                </div>
+            </div>
+
+            <div class="potensi-card" style="background-image: url('kelautan.jpg');">
+                <div class="card-content">
+                    <i class="fas fa-fish text-gold fa-2x mb-1"></i>
+                    <h3 class="text-gold">Kelautan & Perikanan</h3>
+                    <p class="text-dim">Kekayaan Teluk Tomini dengan potensi ekspor tuna kelas dunia.</p>
+                </div>
+            </div>
+
+            <div class="potensi-card" style="background-image: url('pari.jpg');">
+                <div class="card-content">
+                    <i class="fas fa-map-marked-alt text-gold fa-2x mb-1"></i>
+                    <h3 class="text-gold">Pariwisata & Budaya</h3>
+                    <p class="text-dim">Ekowisata bahari mancanegara dan kearifan lokal yang mendunia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel mt-2">
+            <div class="grid-2">
+                <div>
+                    <h2 class="text-gold mb-2">UMKM & Kerajinan</h2>
+                    <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                        <i class="fas fa-cut text-gold fa-2x"></i>
+                        <div>
+                            <h4>Kain Karawo</h4>
+                            <p style="font-size: 0.9rem;">Sulam tangan eksklusif dengan teknik rumit khas Gorontalo.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px;">
+                        <i class="fas fa-hat-cowboy text-gold fa-2x"></i>
+                        <div>
+                            <h4>Upia Karanji</h4>
+                            <p style="font-size: 0.9rem;">Anyaman rotan tradisional ikonik yang mendunia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 12px; display: flex; flex-direction: column; justify-content: center;">
+                    <h3>Investasi Strategis</h3>
+                    <p class="mb-2">Dapatkan kemudahan akses data investasi.</p>
+                    <a href="#" class="btn">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center"><small>&copy; 2026 Pemerintah Provinsi Gorontalo.</small></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
