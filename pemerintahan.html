@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemerintahan - Provinsi Gorontalo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-fixed" style="background-image: url('pm.jpeg');"></div>
+    <div class="overlay-dark"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">GORONTALO<span>PROV</span></a>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="pemerintahan.html" class="active">Pemerintahan</a></li>
+                <li><a href="potensi.html">Potensi</a></li>
+                <li><a href="pariwisata.html">Pariwisata</a></li>
+                <li><a href="peta.html">Peta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container section-pad">
+        <div class="text-center mb-2">
+            <h1>Tata Kelola Pemerintahan</h1>
+            <p style="color: var(--text-dim);">Transparan, Akuntabel, dan Berorientasi Pelayanan Publik.</p>
+        </div>
+
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'visi')">Visi & Misi</button>
+            <button class="tab-btn" onclick="openTab(event, 'struktur')">Struktur Organisasi</button>
+            <button class="tab-btn" onclick="openTab(event, 'layanan')">Layanan Publik</button>
+            <button class="tab-btn" onclick="openTab(event, 'transparansi')">Transparansi Anggaran</button>
+        </div>
+
+        <div id="visi" class="tab-pane active">
+            <div class="glass-panel text-center mb-2">
+                <h3 class="text-gold">Visi RPJMD 2023-2026</h3>
+                <h2 style="font-style: italic;">"Gorontalo Maju, Sejahtera, dan Mendunia"</h2>
+            </div>
+            <div class="grid-2">
+                <div class="glass-panel">
+                    <h3><i class="fas fa-bullseye text-gold"></i> Misi Utama</h3>
+                    <ul class="list-check mt-2">
+                        <li><i class="fas fa-check"></i> Meningkatkan kualitas SDM yang religius dan kompetitif.</li>
+                        <li><i class="fas fa-check"></i> Mengembangkan infrastruktur wilayah yang merata dan berwawasan lingkungan.</li>
+                        <li><i class="fas fa-check"></i> Transformasi ekonomi berbasis pertanian, kelautan, dan pariwisata.</li>
+                        <li><i class="fas fa-check"></i> Reformasi birokrasi berbasis teknologi digital (Smart Province).</li>
+                    </ul>
+                </div>
+                <div class="glass-panel">
+                    <h3><i class="fas fa-star text-gold"></i> Program Unggulan</h3>
+                    <ul class="list-check mt-2">
+                        <li><i class="fas fa-graduation-cap"></i> Beasiswa "Gorontalo Cerdas" hingga S3.</li>
+                        <li><i class="fas fa-heartbeat"></i> Jaminan Kesehatan Semesta (UHC) 100%.</li>
+                        <li><i class="fas fa-wifi"></i> Internet Masuk Desa (Blankspot Free).</li>
+                        <li><i class="fas fa-road"></i> Penyelesaian Gorontalo Outer Ring Road (GORR).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="struktur" class="tab-pane">
+            <div class="glass-panel text-center">
+                <div class="grid-2">
+                    <div>
+                        <img src="https://via.placeholder.com/150" style="border-radius: 50%; border: 3px solid var(--primary-gold); margin-bottom: 1rem;">
+                        <h3>Dr. Ir. H. Gusnar Ismail, S.E., M.M</h3>
+                        <p class="text-gold">Gubernur Gorontalo</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/150" style="border-radius: 50%; border: 3px solid #ccc; margin-bottom: 1rem;">
+                        <h3>Hj. Idah Syahidah Rusli Habibie, S.H., M.H.</h3>
+                        <p class="text-gold">Wakil Gubernur</p>
+                    </div>
+                </div>
+                <hr style="border-color: var(--glass-border); margin: 2rem 0;">
+                <h3 class="mb-2">Perangkat Daerah (OPD)</h3>
+                <div class="grid-3 text-left">
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                        <strong>Bappeda</strong><br><small>Perencanaan Pembangunan</small>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                        <strong>BPKAD</strong><br><small>Keuangan & Aset</small>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                        <strong>Dinas Kominfotik</strong><br><small>Statistik & Persandian</small>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                        <strong>Dinas Dikbud</strong><br><small>Pendidikan & Kebudayaan</small>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                        <strong>Dinas Kesehatan</strong><br><small>Layanan Medis</small>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                        <strong>Dinas PUPR</strong><br><small>Infrastruktur</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="layanan" class="tab-pane">
+            <div class="grid-3">
+                <div class="glass-panel text-center">
+                    <i class="fas fa-id-card fa-3x text-gold mb-2"></i>
+                    <h4>Administrasi Kependudukan</h4>
+                    <p class="text-dim">Layanan e-KTP, KK, dan Akta Sipil terintegrasi.</p>
+                    <a href="#" class="btn btn-outline" style="margin: 1rem 0; font-size: 0.8rem;">Akses Dukcapil</a>
+                </div>
+                <div class="glass-panel text-center">
+                    <i class="fas fa-file-contract fa-3x text-gold mb-2"></i>
+                    <h4>Perizinan Online (OSS)</h4>
+                    <p class="text-dim">Urus izin usaha dan investasi satu pintu.</p>
+                    <a href="#" class="btn btn-outline" style="margin: 1rem 0; font-size: 0.8rem;">Akses OSS</a>
+                </div>
+                <div class="glass-panel text-center">
+                    <i class="fas fa-laptop-medical fa-3x text-gold mb-2"></i>
+                    <h4>Layanan Kesehatan</h4>
+                    <p class="text-dim">Pendaftaran RSUD Ainun Habibie & BPJS.</p>
+                    <a href="#" class="btn btn-outline" style="margin: 1rem 0; font-size: 0.8rem;">Booking Online</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="transparansi" class="tab-pane">
+            <div class="glass-panel">
+                <h3><i class="fas fa-download text-gold"></i> Dokumen Publik</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; color: #fff;">
+                    <tr style="border-bottom: 1px solid var(--glass-border);">
+                        <th style="text-align: left; padding: 10px;">Nama Dokumen</th>
+                        <th style="text-align: left; padding: 10px;">Tahun</th>
+                        <th style="text-align: right; padding: 10px;">Aksi</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--glass-border);">
+                        <td style="padding: 10px;">APBD Provinsi Gorontalo</td>
+                        <td style="padding: 10px;">2025</td>
+                        <td style="padding: 10px; text-align: right;"><a href="#" class="text-gold">Unduh <i class="fas fa-file-pdf"></i></a></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--glass-border);">
+                        <td style="padding: 10px;">Laporan Kinerja Instansi (LAKIP)</td>
+                        <td style="padding: 10px;">2024</td>
+                        <td style="padding: 10px; text-align: right;"><a href="#" class="text-gold">Unduh <i class="fas fa-file-pdf"></i></a></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--glass-border);">
+                        <td style="padding: 10px;">Rencana Kerja Pemerintah (RKP)</td>
+                        <td style="padding: 10px;">2026</td>
+                        <td style="padding: 10px; text-align: right;"><a href="#" class="text-gold">Unduh <i class="fas fa-file-pdf"></i></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center"><small>&copy; 2026 Pemerintah Provinsi Gorontalo.</small></div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabLinks;
+            tabContent = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+                tabContent[i].classList.remove("active");
+            }
+            tabLinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
